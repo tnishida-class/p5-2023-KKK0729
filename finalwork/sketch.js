@@ -690,8 +690,8 @@ function drawRedFrame(x1, y1, x2, y2) {
 }
 function JudgeWinner(count_black, count_white){
   noStroke(); fill(0); textAlign(CENTER, CENTER); textSize(20);
-  if((count_black > 0) && (count_black > count_white) || (count_black == count_white && count % 2 == 1)){text("黒の勝ちです", 700, 550);}
-  else if((count_white > 0) && (count_black < count_white) || (count_black == count_white && count % 2 == 0)){text("白の勝ちです", 700, 550);}
+  if((count_black > 0) && ((count_black > count_white) || (count_black == count_white && count % 2 == 1))){text("黒の勝ちです", 700, 550);}
+  else if((count_white > 0) && ((count_black < count_white) || (count_black == count_white && count % 2 == 0))){text("白の勝ちです", 700, 550);}
   text(`黒: ${count_black}, 白: ${count_white}`, 700, 580);
 }
 //以下コピー用
